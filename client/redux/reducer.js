@@ -8,14 +8,12 @@ var initialState = {
 
 var reducer = function(state, action) {
 	state = state || initialState;
-	console.log('state.list', state.list);
-
 	if(action.type === actions.FETCH_DATA_SUCCESS) {
 		console.log('fetchData success');
 		var state = Object.assign({}, state, {
-			list: action.data.body.response.groups[0].items
+			list: action.data.body.data
 		});
-		console.log('characterdata', characterData);
+		console.log('list', state.list);
 		return state;
 	}
 	else if(action.type === actions.FETCH_DATA_ERROR) {
