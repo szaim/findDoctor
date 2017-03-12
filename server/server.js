@@ -25,10 +25,12 @@ app.get('/betterdoctor/:name/:location', function(req, res) {
 
    var geocoder = NodeGeocoder(geocoderProvider, httpAdapter, extra);
    geocoder.geocode(location, function(err, res) {
-     console.log('location', res);
+     // console.log('location', res);
      latLong = Math.round(res[0].latitude) + '%2C' + Math.round(res[0].longitude) + '%2C100';
      console.log('latlong', latLong);
-     
+     console.log('url', url);
+     console.log('name', name);
+     console.log('location', location);
    });
 
    unirest.get(url + 'name=' + name + '&location=' + latLong + '&skip=0&limit=30' + '&user_key=' + clientSecret)

@@ -1,0 +1,78 @@
+
+body {
+    font-family: 'icomoon' !important;
+}
+
+
+/**************************** Header ****************************/
+
+.header {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    height: 60px;
+    margin-left: 0px;
+    background: #feed5a;
+    display: block;	
+}
+
+.header-wrapper {
+    margin-right: 50px;
+    margin-left: 50px;	
+}
+
+.headerName {
+    font-size: 48px;
+    color: #022249;
+    letter-spacing: -1.16px;
+    z-index: 1;
+    position: absolute;
+    top: -7px;	
+}
+
+/**************************** Search Container ****************************/
+
+.search-container {
+    position: relative;
+    max-width: 1000px;
+    padding-top: 280px;
+}
+
+.search-wrapper {
+    background-image: url(http://www.myelomacrowd.org/wp-content/uploads/2014/04/photodune-5733395-asian-doctor-standing-at-hospital-corridor-l.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+
+.form {
+    text-align: -webkit-center;
+}
+
+.form-control {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    height: 50px;
+}
+
+.search-button {
+    color: #022249;
+    border-color: #feed5a;
+    background-color: #feed5a;
+}
+
+.title {
+    color: #042b5a;
+    text-align: center;
+    font-family: sharp-sans-bold,Arial,sans-serif;
+    font-size: 70px;
+    line-height: 88px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+

@@ -7,8 +7,10 @@ var Home = React.createClass({
 
 	render: function() {
 		return (
-			<div>
-				<Search />
+			<div className='row'>
+				<div className='col-xs-12 search-wrapper'>
+					<Search />
+				</div>
 			</div>
 
 		)

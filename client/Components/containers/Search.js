@@ -3,23 +3,28 @@ var connect = require('react-redux').connect;
 var actions = require('../../redux/actions');
 
 var Search = React.createClass({
+	componentWillMount: function(){
+		this.props.dispatch(actions.fetchData('dentist', 'rockville'));
 
-searchDoctor: function(event){
-	event.preventDefault();
-	var name = this.refs.keyName.value;
-	var location = this.refs.location.value;
-	console.log('this hit');
-	console.log(name);
-	this.props.dispatch(actions.fetchData(name, location));
-},
+	},
+	searchDoctor: function(event){
+		event.preventDefault();
+		var name = this.refs.keyName.value;
+		var location = this.refs.location.value;
+		console.log('this hit');
+		console.log(name);
+		console.log(location);
+		this.props.dispatch(actions.fetchData(name, location));
+	},
 
 
 	render: function() {
 		return (
-			<div>
-				<form  onSubmit={this.searchDoctor}>
-						<input  type='text' ref='location' placeholder='Destination, city' required />
-						<input  type='text' ref='keyName' placeholder='Search category' required />
+			<div className='container search-container'>
+				<h1 className='title'>Ouch? Find a doctor.</h1>
+				<form className='form form-inline' onSubmit={this.searchDoctor}>
+						<input className='form-control' style={{width:'400px'}} type='text' ref='keyName' placeholder='What brought you here today?' required />
+						<input  className='form-control' style={{width:'250px'}} type='text' ref='location' placeholder='City/State or Zip' required />
 						<button className='btn btn-primary btn-lg search-button' type='submit'>Search</button>
 				
 				</form>
