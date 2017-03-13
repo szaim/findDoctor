@@ -33,7 +33,7 @@ app.get('/betterdoctor/:name/:location', function(req, res) {
      console.log('location', location);
    });
 
-   unirest.get(url + 'name=' + name + '&location=' + latLong + '&skip=0&limit=30' + '&user_key=' + clientSecret)
+   unirest.get(url + 'name=' + name + '&location=' + latLong + '&skip=0&limit=20' + '&user_key=' + clientSecret)
    .end(function(data){
       return res.send(data);
    });

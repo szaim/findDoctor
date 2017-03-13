@@ -14,6 +14,7 @@ var Search = React.createClass({
 		console.log('this hit');
 		console.log(name);
 		console.log(location);
+		this.props.dispatch(actions.fetchLocationSuccess(location));
 		this.props.dispatch(actions.fetchData(name, location));
 	},
 
@@ -24,7 +25,7 @@ var Search = React.createClass({
 				<h1 className='title'>Ouch? Find a doctor.</h1>
 				<form className='form form-inline' onSubmit={this.searchDoctor}>
 						<input className='form-control' style={{width:'400px'}} type='text' ref='keyName' placeholder='What brought you here today?' required />
-						<input  className='form-control' style={{width:'250px'}} type='text' ref='location' placeholder='City/State or Zip' required />
+						<input  id='location' className='form-control' style={{width:'250px'}} type='text' ref='location' placeholder='City/State or Zip' required />
 						<button className='btn btn-primary btn-lg search-button' type='submit'>Search</button>
 				
 				</form>

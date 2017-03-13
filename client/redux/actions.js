@@ -16,6 +16,14 @@ var fetchDataError = function(error) {
 	}
 }
 
+var FETCH_LOCATION_SUCCESS = 'FETCH_LOCATION_SUCCESS';
+var fetchLocationSuccess = function(location) {
+  return {
+    type: FETCH_LOCATION_SUCCESS,
+    location: location
+  };
+};
+
 var fetchData = function(keyName, location) {
  return function(dispatch) {
     var url = '/betterdoctor/' + keyName + '/' + location;
@@ -47,4 +55,6 @@ exports.FETCH_DATA_SUCCESS = FETCH_DATA_SUCCESS;
 exports.fetchDataSuccess = fetchDataSuccess;
 exports.FETCH_DATA_ERROR = FETCH_DATA_ERROR;
 exports.fetchDataError = fetchDataError;
+exports.FETCH_LOCATION_SUCCESS = FETCH_LOCATION_SUCCESS;
+exports.fetchLocationSuccess = fetchLocationSuccess;
 exports.fetchData = fetchData;

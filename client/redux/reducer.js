@@ -2,7 +2,8 @@ var actions = require("./actions");
 
 
 var initialState = {
-	list: []
+	list: [],
+	location:'United State'
 };
 
 
@@ -20,6 +21,15 @@ var reducer = function(state, action) {
 		return {
 			error: action.error
 		}
+	}
+	else if(action.type === actions.FETCH_LOCATION_SUCCESS) {
+		console.log('reducer location', action.location);
+		state = Object.assign({}, state, {
+			location: action.location
+		});
+		console.log('reducer location state', state);
+
+		return state;
 	}
 
 	return state;
