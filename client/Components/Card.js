@@ -11,7 +11,7 @@ var Card = function(props) {
 		  	<h4 className="card-title">{`Dr.${props.doctorName}, ${props.title}`}</h4>
 		  	<h6 className="card-subtitle mb-2 text-muted">{props.specialty}</h6>
 		  	<img src={props.ratings} alt="stars image cap" /><br />
-		    <button className="btn btn-primary doctor-info-button" data-toggle="modal" data-target={`#${props.id}`}>Go somewhere</button>
+		    <button className="btn btn-primary doctor-info-button" data-toggle="modal" data-target={`#${props.id}`}>More info</button>
 		  </div>
 		</div>
 			<CardModal
