@@ -160,6 +160,26 @@ body {
     position: relative;
 }
 
+/**************************** CardModal ****************************/
+
+.footer-wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+footer {
+    height: 100px;
+    background: #042b5a;
+}
+
+.footer-text {
+    text-align: center;
+    padding: 35px;
+    margin-bottom: 0px;
+    color: #feed5a;
+    font-weight: 500;
+}
+
 /**************************** MediaQueries ****************************/
 
 @media screen and (min-width: 1600px) {
