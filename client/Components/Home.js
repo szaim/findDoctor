@@ -12,7 +12,7 @@ var Home = React.createClass({
 				<div className='col-xs-12 search-wrapper'>
 					<Search />
 				</div>
-				<div className='col-xs-12 row'>
+				<div className='col-xs-12 row body-wrapper'>
 					<CardList />
 					<div className="col-lg-3 map-wrapper">
 						<MapLocation />

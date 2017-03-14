@@ -37,13 +37,13 @@ var CardModal = React.createClass({
 			        		<p className='paragraph-elipsis'>{this.props.doctorPhone}</p>
 			        	</div>
 			        </div><hr/>
-			        <div>
+			        <div style={{height: '100px'}}>
 			        <iframe
 						allowFullScreen
 		                className="left-column" 
 		                title="GoogleMaps"
 		                width="100%"
-		                height="100"
+		                height="100%"
 		                frameBorder="0"
 		                scrolling="no"
 		                marginHeight="0"
